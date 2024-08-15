@@ -2,6 +2,10 @@
 .aptos
 .env
 move/build
+aptos.move/
+*.mv
+*.mvi
+*.blob
 
 # Logs
 logs
@@ -12,13 +16,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
 dist
 build
 dist-ssr
-*.local
+.cache/
+.cache-loader/
+
+# Lock files
 package-lock.json
 pnpm-lock.yaml
+yarn.lock
 
 # Editor directories and files
 .vscode/*
@@ -31,5 +40,25 @@ pnpm-lock.yaml
 *.sln
 *.sw?
 
+# Rust specific files (if using Rust for Move development)
+target/
+Cargo.lock
+Cargo.toml
+
 # template related files
 example-collection/
+
+# Test & Artifacts
+test/
+*.json
+*.txt
+
+# Coverage
+coverage/
+*.lcov
+
+# Miscellaneous
+*.swp
+*.swo
+*.swn
+*~
